@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Property by Jaz International Sdn Bhd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--ink:#12263A;--paper:#F6F7F4;--card:#fff;--brass:#8A5E0F;--sage:#E3EAE5;--line:#D6DCD7;--muted:#51606E;--btn:#12263A;--btn-text:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#E8EEF3;--paper:#0E1A26;--card:#162434;--brass:#E0B25A;--sage:#13222F;--line:#2A3B4B;--muted:#9FB0BF;--btn:#E0B25A;--btn-text:#0E1A26;color-scheme:dark}}
+:root[data-theme="dark"]{--ink:#E8EEF3;--paper:#0E1A26;--card:#162434;--brass:#E0B25A;--sage:#13222F;--line:#2A3B4B;--muted:#9FB0BF;--btn:#E0B25A;--btn-text:#0E1A26;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;padding-bottom:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;line-height:1.2}
+.mark{width:36px;height:36px;border-radius:6px;background:var(--btn);color:var(--btn-text);display:grid;place-items:center;font:700 18px "Bricolage Grotesque",sans-serif}
+.logo small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+nav a{margin-left:18px;text-decoration:none;font-weight:500;font-size:15px}
+.btn{display:inline-block;border:0;border-radius:8px;background:var(--btn);color:var(--btn-text);font:600 15px "Instrument Sans",sans-serif;padding:12px 20px;cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.hero{background:var(--sage);padding:44px 0 52px}
+.hero h1{font-size:clamp(32px,6.4vw,58px);max-width:15em;font-weight:700}
+.hero p{max-width:34em;color:var(--muted);font-size:18px;margin:14px 0 28px}
+.search{background:var(--card);border:1.5px solid var(--ink);border-radius:12px;padding:16px;display:grid;gap:14px}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:8px;overflow:hidden;width:max-content}
+.seg button{border:0;background:transparent;color:var(--ink);font:500 15px "Instrument Sans",sans-serif;padding:9px 18px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--btn);color:var(--btn-text)}
+.fields{display:grid;gap:12px;grid-template-columns:1fr}
+label{font-size:14px;font-weight:600;display:block;margin-bottom:4px}
+input,select,textarea{width:100%;font:400 16px "Instrument Sans",sans-serif;padding:11px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}
+section{padding:48px 0}
+h2{font-size:clamp(26px,4.5vw,36px);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 24px;max-width:38em}
+.grid{display:grid;gap:18px;grid-template-columns:1fr}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.band{height:96px;display:flex;align-items:flex-end;justify-content:space-between;padding:10px 14px;background:linear-gradient(135deg,color-mix(in srgb,hsl(var(--h) 45% 50%) 30%,var(--card)),color-mix(in srgb,hsl(var(--h) 45% 50%) 12%,var(--card)));font-weight:600}
+.tag{font-size:13px;font-weight:600;background:var(--card);border:1.5px solid var(--ink);border-radius:999px;padding:2px 10px}
+.body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.body h3{font-size:19px}
+.loc,.spec{color:var(--muted);font-size:14.5px;margin:0}
+.price{font:700 20px "Bricolage Grotesque",sans-serif;margin-top:auto;padding-top:8px;color:var(--brass)}
+.body .btn{margin-top:8px;text-align:center}
+.empty{grid-column:1/-1;padding:28px;border:1.5px dashed var(--line);border-radius:10px;color:var(--muted)}
+.note{font-size:13.5px;color:var(--muted);margin-top:18px}
+.how{display:grid;gap:18px;grid-template-columns:1fr}
+.how div{border-top:3px solid var(--brass);padding-top:12px}
+.how h3{font-size:20px;margin-bottom:4px}
+.how p{margin:0;color:var(--muted)}
+.owner{background:var(--btn);color:var(--btn-text)}
+.owner .wrap{display:grid;gap:16px;align-items:center}
+.owner p{margin:6px 0 0;opacity:.85;max-width:36em}
+.owner .btn{background:var(--btn-text);color:var(--btn)}
+.contact{display:grid;gap:14px;max-width:560px}
+footer{border-top:1.5px solid var(--line);padding:24px 0;color:var(--muted);font-size:14px}
+@media(min-width:720px){
+.fields{grid-template-columns:1.4fr 1fr auto;align-items:end}
+.grid{grid-template-columns:repeat(2,1fr)}
+.how{grid-template-columns:repeat(3,1fr)}
+.owner .wrap{grid-template-columns:1fr auto}
+}
+@media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){nav a:not(.btn){display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#atas"><span class="mark">J</span><span>Property<small>by Jaz International Sdn Bhd</small></span></a>
+  <nav><a href="#senarai">Listings</a><a href="#cara">How we help</a><a class="btn" href="#hubungi">Contact us</a></nav>
+</div></header>
+
+<main id="atas">
+<div class="hero"><div class="wrap">
+  <h1>The right property for every opportunity.</h1>
+  <p>Houses, buildings, office lots, shop lots, warehouses and land. We connect property owners with the people looking for them.</p>
+  <div class="search">
+    <div class="seg" role="group" aria-label="Type of deal">
+      <button type="button" data-m="all" aria-pressed="true">All</button>
+      <button type="button" data-m="Jual" aria-pressed="false">Buy</button>
+      <button type="button" data-m="Sewa" aria-pressed="false">Rent</button>
+    </div>
+    <div class="fields">
+      <div><label for="q">Location</label><input id="q" type="search" placeholder="e.g. Shah Alam, Johor"></div>
+      <div><label for="ty">Property type</label>
+        <select id="ty"><option value="">All types</option><option>House</option><option>Building</option><option>Office Lot</option><option>Shop Lot</option><option>Warehouse</option><option>Land</option></select></div>
+      <a class="btn" href="#senarai">Search properties</a>
+    </div>
+  </div>
+</div></div>
+
+<section id="senarai"><div class="wrap">
+  <h2>Latest properties</h2>
+  <p class="sub">Filter by deal type, property type and location above.</p>
+  <div class="grid" id="list" aria-live="polite"></div>
+  <p class="note">The listings above are samples for display. Real properties will replace them.</p>
+</div></section>
+
+<section id="cara" style="background:var(--sage)"><div class="wrap">
+  <h2>How we help</h2>
+  <p class="sub">Whether you want to buy, rent or sell, the process is simple.</p>
+  <div class="how">
+    <div><h3>Buy</h3><p>Tell us your budget and preferred location. We suggest matching properties and arrange viewings.</p></div>
+    <div><h3>Rent</h3><p>Find a home, office, shop or warehouse that fits your needs, with clear rental terms.</p></div>
+    <div><h3>Sell and let</h3><p>List your property and we connect you with serious buyers or tenants.</p></div>
+  </div>
+</div></section>
+
+<div class="owner"><section><div class="wrap">
+  <div><h2>Have a property to sell or rent out?</h2><p>Contact us and we will help you find the right buyer or tenant.</p></div>
+  <a class="btn" href="#hubungi" id="ownerBtn">List your property</a>
+</div></section></div>
+
+<section id="hubungi"><div class="wrap">
+  <h2>Contact us</h2>
+  <p class="sub">Fill in your details below. Your message opens in WhatsApp so we can reply directly.</p>
+  <div class="contact">
+    <div><label for="nama">Your name</label><input id="nama" autocomplete="name"></div>
+    <div><label for="tujuan">I want to</label>
+      <select id="tujuan"><option>Buy a property</option><option>Rent a property</option><option>Sell my property</option><option>Rent out my property</option></select></div>
+    <div><label for="msg">Message</label><textarea id="msg" rows="4" placeholder="Property type, location, budget or other details"></textarea></div>
+    <button class="btn" type="button" id="send">Send via WhatsApp</button>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">&copy; 2026 Jaz International Sdn Bhd. All rights reserved.</div></footer>
+
+<script>
+var WA="60100000000"; // Gantikan dengan nombor WhatsApp sebenar (format 60...)
+var L=[
+{t:"Two-Storey Terrace House",ty:"House",loc:"Shah Alam, Selangor",st:"Jual",p:685000,d:"4 bedrooms, 3 bathrooms, 1,800 sq ft",h:200},
+{t:"Terrace House for Rent",ty:"House",loc:"Cheras, Kuala Lumpur",st:"Sewa",p:2200,d:"3 bedrooms, 2 bathrooms, partly furnished",h:200},
+{t:"Office Lot Near LRT",ty:"Office Lot",loc:"Petaling Jaya, Selangor",st:"Sewa",p:4500,d:"1,200 sq ft, level 8",h:215},
+{t:"Three-Storey Shop Lot",ty:"Shop Lot",loc:"Seremban, Negeri Sembilan",st:"Jual",p:1150000,d:"2,400 sq ft, corner lot",h:35},
+{t:"Warehouse with Loading Dock",ty:"Warehouse",loc:"Klang, Selangor",st:"Sewa",p:18000,d:"10,000 sq ft, large lorry access",h:160},
+{t:"Vacant Land with Individual Title",ty:"Land",loc:"Kuantan, Pahang",st:"Jual",p:420000,d:"1 acre, freehold",h:100},
+{t:"Four-Storey Commercial Building",ty:"Building",loc:"Johor Bahru, Johor",st:"Jual",p:3800000,d:"Shops on the ground floor, offices above",h:265},
+{t:"Main-Road Shop Lot",ty:"Shop Lot",loc:"Puchong, Selangor",st:"Sewa",p:6800,d:"1,600 sq ft, high foot traffic",h:20}
+];
+var S={m:"all"},list=document.getElementById("list"),q=document.getElementById("q"),ty=document.getElementById("ty");
+function rm(n){return "RM "+n.toLocaleString("en-MY")}
+function render(){
+  var k=q.value.trim().toLowerCase();
+  var r=L.filter(function(x){return (S.m=="all"||x.st==S.m)&&(!ty.value||x.ty==ty.value)&&(!k||x.loc.toLowerCase().indexOf(k)>-1)});
+  list.innerHTML=r.length?r.map(function(x,i){return '<article class="card"><div class="band" style="--h:'+x.h+'"><span>'+x.ty+'</span><span class="tag">'+(x.st=="Jual"?"For sale":"For rent")+'</span></div><div class="body"><h3>'+x.t+'</h3><p class="loc">'+x.loc+'</p><p class="spec">'+x.d+'</p><div class="price">'+rm(x.p)+(x.st=="Sewa"?" / month":"")+'</div><a class="btn ghost" href="#hubungi" data-t="'+x.t+'" data-s="'+x.st+'">Ask about this</a></div></article>'}).join(""):'<div class="empty">No matching properties. Try a different location or type, or contact us for a custom search.</div>';
+}
+document.querySelectorAll(".seg button").forEach(function(b){b.onclick=function(){S.m=b.dataset.m;document.querySelectorAll(".seg button").forEach(function(o){o.setAttribute("aria-pressed",o==b)});render()}});
+q.oninput=render;ty.onchange=render;
+list.onclick=function(e){var a=e.target.closest("a[data-t]");if(!a)return;document.getElementById("tujuan").selectedIndex=a.dataset.s=="Jual"?0:1;document.getElementById("msg").value="I’m interested in: "+a.dataset.t+"."};
+document.getElementById("ownerBtn").onclick=function(){document.getElementById("tujuan").selectedIndex=2};
+document.getElementById("send").onclick=function(){
+  var t="Hello, I’m "+(document.getElementById("nama").value||"(name)")+". I want to: "+document.getElementById("tujuan").value+". "+document.getElementById("msg").value;
+  window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(t),"_blank");
+};
+render();
+</script>
+</body>
+</html>
